@@ -1,1 +1,0 @@
-electron C:\Users\jonas\Desktop\Projects\Planner\index.js
