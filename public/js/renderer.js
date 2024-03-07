@@ -262,6 +262,12 @@ function addKeyHint(key, text) {
     document.getElementById("tooltips").appendChild(a);
 }
 
+function closeModal() {
+    canvas.style.background = "initial";
+    document.getElementById("modal").style.visibility = "hidden";
+    modalIsOpen = false;
+}
+
 
 // Show modal
 let projects = getProjects();
@@ -270,13 +276,15 @@ projects.forEach((id) => {
 
     let el = document.createElement("p");
     el.className = "projects__project";
-    el.innerText = proj.name;
+    if (proj.name === "") {el.innerHTML = "<i>Unnamed Project</i>"; el.style.color = "#777"}
+    else el.innerText = proj.name;
+
     el.setAttribute("guid", proj.guid);
 
+    el.title = proj.guid;
+
     el.addEventListener("click", (event) => {
-        // Hide modal
-        document.getElementById("modal").style.visibility = "hidden";
-        modalIsOpen = false;
+        closeModal();
 
         // Load project
         let guid = event.target.getAttribute("guid");
@@ -294,9 +302,7 @@ document.getElementById("create-btn").addEventListener("click", (event) => {
     project = loadProject(guid);
     rerender();
 
-    // Hide modal
-    document.getElementById("modal").style.visibility = "hidden";
-    modalIsOpen = false;
+    closeModal();
 });
 
 var modalIsOpen = true;
@@ -317,6 +323,9 @@ var canvasRect = {
     x2: null,
     y2: null
 };
+
+// Make canvas darker while modal is opened
+canvas.style.background = "#aaa";
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
