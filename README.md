@@ -1,7 +1,7 @@
-![PLANA!](banner.png)
+<!--![PLANA!](banner.png)-->
+
+<img src="banner.png" height="50">
 PLANA! is an open source diagram creation software that allows you to plan structures using nodes and connections between them.
-
-
 
 # Features
 - Create nodes
