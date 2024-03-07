@@ -1,0 +1,17 @@
+{
+  "name": "packman",
+  "version": "1.0.0",
+  "description": "The Sample Pack Manager",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "nojasm",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^25.3.1"
+  },
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}

@@ -1,0 +1,4 @@
+.vs/
+projects/*
+!projects/template.json
+node_modules/
