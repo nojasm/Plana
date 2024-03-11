@@ -10,6 +10,7 @@ PLANA! is an open source diagram creation software that allows you to plan struc
 - Connect nodes
 - Move nodes, pan and zoom canvas
 - Safe and load projects
+- Double click on nodes to create sub-pages ("spaces!")
 
 # ToDo
 - Node Styles (Presets maybe?)
