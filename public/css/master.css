@@ -54,6 +54,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 10px;
 
     position: absolute;
     top: 0;
@@ -75,6 +76,36 @@ body {
     background-color: #d7d7d7;
 
     outline: none;
+}
+
+#header__project__space__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+
+    color: #ffc;
+    background-color: #111;
+
+    height: 25px;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+#header__project__space__back {
+    filter: invert(1);
+    height: 100%;
+}
+
+.header__project__space__wrapper__enable:hover {
+    filter: opacity(0.85);
+    cursor: pointer;
+}
+
+#header__project__space {
+    font-family: monospace;
+    margin: 0;
+    user-select: none;
 }
 
 #modal {
